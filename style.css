@@ -297,6 +297,7 @@ h1 {
 	overflow: hidden;
 	background:rgba(230, 230, 230, 0.5);
 	color:#555;
+	white-space: normal;
 }
 
 .album.selected {
@@ -415,9 +416,8 @@ ul.press-photos > li img {
 	}
 
 	.album-title {
-		font-size: 20px;
+		font-size: 18px;
 	}
-
 
 	.navigation {
 		padding-top:180px;
