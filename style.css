@@ -217,7 +217,7 @@ h1 {
 	margin-right: -15px;
 	margin-left: -15px;
 	overflow: hidden;
-	padding-left:50px;
+	padding-left:30px;
 
 	-webkit-overflow-scrolling: touch;
 	overflow-x:scroll;
@@ -239,6 +239,11 @@ h1 {
 	margin-right:-10px;
 	height:240px;
 	position: relative;
+}
+
+.album-player a {
+	text-decoration: none;
+	color:#447;
 }
 
 .album-player > * {
@@ -400,7 +405,7 @@ ul.press-photos > li img {
 	}
 
 	.album-player {
-		height:200px;
+		height:220px;
 	}
 
 	.album-player > * {

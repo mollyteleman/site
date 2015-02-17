@@ -78,6 +78,7 @@
           <label>Description</label><span id="player-desc"></span>
           <label>Length</label><span id="player-length"></span>
           <label>Commissioned</label><span id="player-commissioned"></span>
+          <label>Available at</label><span id="player-available"></span>
           <div class="audio-player"></div>
         </div>
       </div>
@@ -225,6 +226,7 @@
             $("#player-desc").text(work.desc || "-");
             $("#player-length").text(work.length);
             $("#player-commissioned").text(work.commissioned || "-");
+            $("#player-available").html(work.available || "-");
 
             if(work.audio) {
               var p = $("<audio controls><source type='audio/mpeg'></audio>");
