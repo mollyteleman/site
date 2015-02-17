@@ -273,7 +273,6 @@ h1 {
 	background-image:url("holk/holk2.jpg");
 	display:inline-block;
 	margin-right:25px;
-	margin-bottom:30px;
 	-webkit-transition: -webkit-transform 0.2s ease-in-out;
 	overflow:hidden;
 }
@@ -309,7 +308,6 @@ h1 {
 
 .album-year {
 	margin-right:4px;
-	bottom:0px;
 	float:right;
 	font-size: 20px;
 	overflow: hidden;
