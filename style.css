@@ -92,7 +92,7 @@ body {
 .title-bar > * {
 	display:inline-block;
 	width:100%;
-	color:#fff;
+	color:black;
 	font-family: 'Codystar';
 }
 
@@ -271,10 +271,12 @@ h1 {
 	height: 180px;
 	border:4px solid #999;
 	background-image:url("holk/holk2.jpg");
-	display:inline-block;
+	display: inline-block;
+	vertical-align: middle;
 	margin-right:25px;
 	-webkit-transition: -webkit-transform 0.2s ease-in-out;
 	overflow:hidden;
+	white-space: nowrap;
 }
 
 .album:last-child {
@@ -384,6 +386,7 @@ ul.press-photos > li img {
 
 	.title-bar > div, .title-bar > h1 {
 		padding-right:50px;
+		color:#fff;
 	}
 
 	.section-row {
