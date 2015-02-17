@@ -31,7 +31,7 @@
       </div>
       <div class="row section-content">
         <h3>Norrköpingsljud 27-31 maj</h3>
-        <p>....</p>
+        <p>Ny festival med musik av tonsättare från Norrköping.</p>
         <div class="fb-like-box like-box" data-href="https://www.facebook.com/norrkopingsljud" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="false"></div>
       </div>
 
@@ -91,7 +91,7 @@
       <div class="row section-row">
         <h2><a name="biography">Biography</a></h2>
         <span>
-        <a id="bio_lang" class="lang-link" href="#"><span id="bio_lang_label">visa på svenska</span> <span class="glyphicon glyphicon-info-sign"></span></a>
+        <a id="bio_lang" class="lang-link" href="#biography"><span id="bio_lang_label">visa på svenska</span></a>
         </span>
       </div>
       <div class="row section-content">
@@ -108,10 +108,10 @@
       </div>
       <div class="row section-content contact-section" id="contact">
         <div class="circle-photo"></div>
-        <p>
-        <p>phone: 070 251 73 52</p>
-        <p>email: <a href="mailto:info@mollyteleman.se">info@mollyteleman.se</a></p>
-        </p>
+        <div class="contact-info">
+          <p>phone: <span>070 251 73 52</span></p>
+          <p>email: <a href="mailto:info@mollyteleman.se">info@mollyteleman.se</a></p>
+        </div>
       </div>
 
       <div class="image-divider-row">
@@ -125,8 +125,8 @@
       </div>
       <div class="row section-content">
         <ul class="press-photos">
-          <li><a href="mt.jpg"><img src="mt_small.jpg"/></a></li>
-          <li><a href="mt4.jpg"><img src="mt4_small.jpg"/></a></li>
+          <li><a href="press/mt.jpg"><img src="mt_small.jpg"/></a></li>
+          <li><a href="press/mt4.jpg"><img src="mt4_small.jpg"/></a></li>
         </ul>
         <p class="copyright">
           Photographs and art work by Stefan Teleman.
@@ -141,7 +141,8 @@
       $(function () {
         var currentLanguage = "en";
         $("#bio").load("bio_en.html");
-        $("#bio_lang").click(function () {
+        $("#bio_lang").click(function (event) {
+          event.stopPropagation();
           currentLanguage = currentLanguage === "en" ? "sv" : "en";
           $("#bio").load("bio_" + currentLanguage + ".html");
           $("#bio_lang_label").text(currentLanguage === "en" ? "visa på svenska" : "show in english");
@@ -226,7 +227,7 @@
             $("#player-desc").text(work.desc || "-");
             $("#player-length").text(work.length);
             $("#player-commissioned").text(work.commissioned || "-");
-            $("#player-available").html(work.available || "-");
+            $("#player-available").html(work.available || "Contact me");
 
             if(work.audio) {
               var p = $("<audio controls><source type='audio/mpeg'></audio>");

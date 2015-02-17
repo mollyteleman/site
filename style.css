@@ -142,7 +142,7 @@ h1 {
 	margin-left:20px;
 	font-size:16px;
 }
-.section-row a {
+.section-row a, .section-row a:visited {
 	text-decoration: none;
 }
 .section-row a > span:hover {
@@ -164,18 +164,21 @@ h1 {
     background-position: 50%;
     background-size:100%;
     border-radius: 50%;
-    width: 150px;
-    height:150px;
-    float:left;
+    width:70px;
+    height:70px;
     margin-top:10px;
-    margin-right:10px;
+    margin-right:2px;
 	background-image:url("mt3.jpg");
 }
+.contact-info {
+	font-size:16px;
+}
 .contact-section {
-	min-height:200px;
+	min-height:140px;
 }
 
-.contact-section > p {
+.contact-section > div {
+	display:inline-block;
 	vertical-align: middle;
 }
 
@@ -435,6 +438,17 @@ ul.press-photos > li img {
 
 	.without-divider {
 		border-top:none;
+	}
+
+	.circle-photo {
+	    width: 150px;
+	    height:150px;
+	}
+	.contact-section {
+		min-height:200px;
+	}
+	.contact-info {
+		font-size:18px;
 	}
 }
 
