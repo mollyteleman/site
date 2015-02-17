@@ -35,7 +35,14 @@
         <div class="fb-like-box like-box" data-href="https://www.facebook.com/norrkopingsljud" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="false"></div>
       </div>
 
-      <div class="row section-row without-divider">
+      <div class="image-divider-row">
+        <div class="image-divider image-divider-2">
+          <img src="mt4.png" class="pressdivider"/>
+        </div>
+      </div>
+
+
+      <div class="row section-row">
         <h2><a name="listento">Listen To</a></h2>
       </div>
       <div class="row section-content">
@@ -102,7 +109,6 @@
         <div class="image-divider"></div>
       </div>
 
-
       <div class="row section-row">
         <h2><a name="contact">Contact</a></h2>
       </div>
@@ -114,13 +120,7 @@
         </div>
       </div>
 
-      <div class="image-divider-row">
-        <div class="image-divider image-divider-2">
-          <img src="mt4.png" class="pressdivider"/>
-        </div>
-      </div>
-
-      <div class="row section-row">
+      <div class="row section-row without-divider">
         <h2><a name="press">Press Photos</a></h2>
       </div>
       <div class="row section-content">
@@ -129,7 +129,7 @@
           <li><a href="press/mt4.jpg"><img src="mt4_small.jpg"/></a></li>
         </ul>
         <p class="copyright">
-          Photographs and art work by Stefan Teleman.
+          Photographs and artwork by Stefan Teleman.
         </p>
       </div>
 
@@ -155,9 +155,10 @@
           var pos = $(window).scrollTop();
           var height = $(document).height();
           imageDividers.each(function (i) {
-            i = 0;
             var x = $(this);
-            var y = Math.min(95, Math.max(0, i*40 + (pos/height) * 100));
+            var y = Math.min(95, Math.max(0, (pos/height) * 100));
+            if(i === 0) { y = Math.min(95, y + 50); }
+
             x.css("background-position", "50% " + y + "%");
           });
           var y = Math.min(95, Math.max(0, (pos/height) * 400));
@@ -173,6 +174,7 @@
         }
 
         var works = [];
+        var filteredWorks = [];
         var sortBy = "year";
         var showOnly = "all";
 
@@ -190,6 +192,25 @@
           return album;
         }
 
+        var flow = $(".album-flow");
+
+        var updatePlayer = function (work) {
+            $("#player-title").text(work.title);
+            $("#player-type").text(work.type);
+            $("#player-desc").text(work.desc || "-");
+            $("#player-length").text(work.length);
+            $("#player-commissioned").text(work.commissioned || "-");
+            $("#player-available").html(work.available || "Contact me");
+
+            if(work.audio) {
+              var p = $("<audio controls preload='none'><source type='audio/mpeg'></audio>");
+              p.find("source").attr("src", work.audio);
+              $(".audio-player").html(p);
+            } else {
+              $(".audio-player").html("");              
+            }
+        }
+
         var renderWorks = function () {
           works.sort(function (a, b) { // always sort by year first
             return b.year - a.year;
@@ -201,7 +222,7 @@
             });
           }
 
-          var filteredWorks = works;
+          filteredWorks = works;
           if(showOnly !== "all") {
             filteredWorks = [];
             works.forEach(function (w) {
@@ -221,26 +242,22 @@
             $(this).addClass("selected");
             var i = $(this).index();
             var work = filteredWorks[i];
-            $(".album-flow").animate({scrollLeft: 205 * i}, 200);
-            $("#player-title").text(work.title);
-            $("#player-type").text(work.type);
-            $("#player-desc").text(work.desc || "-");
-            $("#player-length").text(work.length);
-            $("#player-commissioned").text(work.commissioned || "-");
-            $("#player-available").html(work.available || "Contact me");
-
-            if(work.audio) {
-              var p = $("<audio controls><source type='audio/mpeg'></audio>");
-              p.find("source").attr("src", work.audio);
-              $(".audio-player").html(p);
-            } else {
-              $(".audio-player").html("");              
-            }
-            $("source").attr("src", work.audio);
+            flow.animate({scrollLeft: 205 * i}, 200);
+            updatePlayer(work);
           });
 
           $(".album.selected").trigger("click");
         }
+
+        flow.scroll(function () {
+          var i = Math.round(flow.scrollLeft() / 205);
+          var work = filteredWorks[i];
+          if(work) {
+            $(".album").removeClass("selected");
+            $($(".album").get(i)).addClass("selected");
+            updatePlayer(work);
+          }
+        })
 
         $.getJSON("works.json", function (ws) {
           works = ws;
