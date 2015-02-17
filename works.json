@@ -12,7 +12,7 @@
 	{"type":"Chamber Music", "title":"Jaga Måne","available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>", "year": 2006, "desc": "", "length": "2'", "commissioned": ""}, 
 	{"type":"Chamber Music", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>", "audio": "musik/Concrete_Flower.mp3", "title":"Concrete Flower", "year": 2005, "desc": "Flute and clarinet", "length": "2'20''", "commissioned": ""}, 
 	{"type":"Chamber Music", "title":"A Christmas Shanty", "year": 2005, "desc": "Tenor, trombone and piano", "length": "3'", "commissioned": ""}, 
-	{"type":"Chamber Music", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>","title":"E.S.C.", "year": 2005, "desc": "Vibraphone, tam tam and chimes", "length": "2'40''", "commissioned": ""}, 
+	{"type":"Chamber Music", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>","title":"E.S.C.", "audio": "musik/esc.mp3", "year": 2005, "desc": "Vibraphone, tam tam and chimes", "length": "2'40''", "commissioned": ""}, 
 	{"type":"Chamber Music", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>", "title":"Tre Romanser (Three Romances)", "year": 2003, "desc": "* för violin och violoncell", "length": "16'", "commissioned": ""}, 
 	{"type":"Chamber Music", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>","title":"A Portrait of the Artist As a Young Woman", "year": 2006, "desc": "Suite for violin, trumpet, accordeon and piano", "length": "10'", "commissioned": "Commissioned by Unge Musikere"}
 ]
