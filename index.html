@@ -35,7 +35,7 @@
         <div class="fb-like-box" data-href="https://www.facebook.com/norrkopingsljud" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="false"></div>
       </div>
 
-      <div class="row section-row">
+      <div class="row section-row without-divider">
         <h2><a name="listento">Listen To</a></h2>
       </div>
       <div class="row section-content">
@@ -50,7 +50,7 @@
 
 
 
-      <div class="row section-row">
+      <div class="row section-row without-divider">
         <h2><a name="works">Works</a></h2>
       </div>
       <div class="row section-content">
@@ -58,7 +58,6 @@
           <span class="slider sort-by">
             <span class="selected" data-sortby="year" href="#">Year</span>
             <span data-sortby="title" href="#">Title</span> 
-            <span data-sortby="type" href="#">Genre</span>             
           </span>
 
           and Show 
@@ -116,7 +115,7 @@
 
       <div class="image-divider-row">
         <div class="image-divider image-divider-2">
-          <img src="mt4.png" width="400px" style="margin-bottom:-5px;"/>
+          <img src="mt4.png" class="pressdivider"/>
         </div>
       </div>
 
@@ -125,9 +124,8 @@
       </div>
       <div class="row section-content">
         <ul class="press-photos">
-          <li><a href="mt.jpg"><img src="mt.jpg"/></a></li>
-          <li><a href="mt3.jpg"><img src="mt3.jpg"/></a></li>
-          <li><a href="mt4.jpg"><img src="mt4.jpg"/></a></li>
+          <li><a href="mt.jpg"><img src="mt_small.jpg"/></a></li>
+          <li><a href="mt4.jpg"><img src="mt4_small.jpg"/></a></li>
         </ul>
         <p class="copyright">
           Photographs and art work by Stefan Teleman.
@@ -198,10 +196,6 @@
           if(sortBy === "title") {
             works.sort(function (a, b) {
               return a.title.localeCompare(b.title);
-            });
-          } else if(sortBy === "type") {
-            works.sort(function (a, b) {
-              return a.type.localeCompare(b.type);
             });
           }
 
