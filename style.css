@@ -1,0 +1,381 @@
+h2, * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px;
+	font-family: "Crimson Text";
+}
+
+h2 {
+	display:inline;
+	font-size:26px;
+}
+
+p {
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+body {
+	background:linear-gradient(#A0C7E4, #DBE5FF);
+}
+
+.container {
+	width:100%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.row {
+	padding-left:25px;
+	padding-right:25px;
+	background:#FFFFFF;
+	font-size:18px;
+}
+
+.photo {
+	float:left;
+	padding-right:10px;
+	padding-top:5px;
+}
+
+.section-row {
+	padding-top:4px;
+	background:#EEE;
+	color:#333;
+	line-height: 28px;
+	height:30px;
+}
+
+.image-divider-row {
+	border-bottom:1px solid #333;
+}
+
+.image-divider {
+	min-height:50px;
+	background-image:url("holk/holk1.jpg");
+	background-size:110%;
+	background-position: 50% 0%
+}
+
+.image-divider-2 {
+	background-image:url("holk/holk2.jpg");
+	background-size: 110%;
+}
+
+
+.title-divider-row {
+	padding-left:0px;
+	padding-right:0px;	
+	border-bottom:1px solid #333;
+}
+
+.title-bar {
+	background-image:url("holk/holk4.jpg");
+	background-size: 100%;
+	background-position: 50% 0%;
+	padding-top:20px;
+	text-align:center;
+}
+
+.title-bar > * {
+	display:inline-block;
+	width:100%;
+	color:#fff;
+	font-family: 'Codystar';
+}
+
+.title-bar > h1, .title-bar > div {
+	vertical-align: top;
+	line-height: 46px;
+}
+.title-bar > div {
+	font-size:47px;
+	line-height: 80px;
+}
+h1 {
+	line-height: 80px;
+	font-size:53px;
+}
+
+
+.navigation {
+	display: block;
+	vertical-align: bottom;
+	text-align: center;
+	font-size: 20px;
+	padding-top:20px;
+}
+.navigation > li {
+	display:inline-block;
+	background:linear-gradient(#A0C7E4, #DBE5FF);
+	padding-left:4px;
+	padding-right:4px;
+	margin-bottom:4px;
+}
+.navigation > li > a {
+	text-decoration: none;
+	color:black;
+	font-family: 'Crushed';
+}
+.navigation > li:hover {
+	background:linear-gradient(#608FB2, #DBE5FF);
+}
+.navigation > li > a:hover {
+}
+
+.section-row * {
+	font-family: 'Crushed';
+}
+.section-row > span {
+	margin-left:20px;
+	font-size:16px;
+}
+.section-row a {
+	text-decoration: none;
+}
+.section-row a > span:hover {
+	text-decoration: underline;
+	color:#ccc;
+}
+.section-row a:visited, .section-row a {
+	color:inherit;
+}
+
+.section-content {
+	min-height:100px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.circle-photo {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size:100%;
+    border-radius: 50%;
+    width: 150px;
+    height:150px;
+    float:left;
+    margin-top:10px;
+    margin-right:10px;
+	background-image:url("mt3.jpg");
+}
+.contact-section {
+	min-height:200px;
+}
+
+.contact-section > p {
+	vertical-align: middle;
+}
+
+.circle-photo:hover {
+	background-image:url("mt2.jpg");
+}
+
+
+.title-row {
+	text-align:center;
+	background-image:url("bg1.jpg");
+	min-height:50px;
+}
+
+.slider {
+	padding-bottom:4px;
+	display:inline-block;
+	margin-right:2px;
+}
+
+.slider > span {
+	background:#999;
+	display:inline-block;
+	padding-right:4px;
+	padding-left:4px;
+	margin-right:-2px;
+	border-radius: 4px;
+}
+
+.slider > span.selected {
+	color:#111;
+	background:#A1B2D0;
+}
+
+.album-flow {
+	background: linear-gradient(#A5B8D2, #fff);
+	height:230px;
+	margin-right: -15px;
+	margin-left: -15px;
+	overflow: hidden;
+	padding-left:50px;
+
+	-webkit-overflow-scrolling: touch;
+	overflow-x:scroll;
+	-moz-user-select: none;
+  	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.album-flow-holder {
+	padding:25px;
+	white-space: nowrap;
+}
+
+.album-player {
+	padding:5px;
+	margin-top:2px;
+	background: linear-gradient(#AAABB0, #98A6BD);
+	margin-left:-10px;
+	margin-right:-10px;
+	height:200px;
+	position: relative;
+}
+
+.album-player > * {
+	line-height: 20px;
+	font-size:18px;
+	vertical-align: top;
+}
+
+.album-player > label {
+	font-family: 'Crushed';
+}
+
+.album-player > label {
+	display: inline-block;
+	width: 20%;
+	font-weight: bold;
+}
+.album-player > span {
+	display: inline-block;
+	width:80%;
+	font-size:16px;
+}
+
+.audio-player {
+	position: absolute;
+	bottom: 0px;
+}
+
+.album {
+	white-space: normal;
+	width: 180px;
+	height: 180px;
+	border:2px solid #999;
+	background-image:url("holk/holk2.jpg");
+	display:inline-block;
+	margin-right:25px;
+	margin-bottom:30px;
+	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+}
+
+.album:last-child {
+	margin-right:245px;
+}
+
+.album.selected {
+	border:2px solid #cacaca;
+	box-shadow: 0px 0px 2px 6px #000;
+	-webkit-transform:scale(1.1);
+}
+.fa:hover {
+	color:rgba(189, 184, 85, 1);
+}
+
+#player-type { font-style: bold; }
+#player-desc { min-height:40px; }
+
+.album-title {
+	margin:4px;
+	font-size: 20px;
+	height:75px;
+	overflow: hidden;
+	background:rgba(230, 230, 230, 0.5);
+	color:black;
+}
+
+.album-year {
+	margin-right:4px;
+	bottom:0px;
+	float:right;
+	font-size: 20px;
+	overflow: hidden;
+	color:black;
+}
+
+ul.press-photos > li {
+	display:inline-block;
+	width:49%;
+}
+ul.press-photos > li > * {
+	display: block;
+}
+ul.press-photos > li img {
+	width:100%;
+}
+
+.copyright {
+	font-size:14px;
+	text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	.album-flow {
+		padding-left:240px;
+		margin-right: -25px;
+		margin-left: -25px;
+	}
+	.album-player {
+		margin-left:5px;
+		margin-right:5px;
+		padding:10px;
+	}
+
+	body {
+		margin-bottom:40px;
+	}
+
+	.row {
+		border-left:1px solid #333;
+		border-right:1px solid #333;
+		border-bottom:1px solid #333;
+	}
+
+	.container {
+		max-width:768px;
+		padding-left:25px;
+		padding-right:25px;
+		padding-top:25px;
+	}
+
+	.title-row {
+		min-height:100px;
+	}
+
+	.title-bar {
+		height:400px;
+		padding-top:40px;
+		padding-right:50px;
+		text-align: right;
+	}
+
+	.navigation {
+		padding-top:180px;
+	}
+
+	.image-divider-row {
+		padding-left:10px;
+		padding-right:10px;	
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

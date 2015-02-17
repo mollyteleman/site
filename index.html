@@ -1,1 +1,279 @@
-hello site?
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Molly Teleman - Composer</title>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Crushed|Fjord+One|Nova+Square|Trochut|Codystar|Ruthie|Crimson+Text|Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main container">
+      <div class="title-divider-row">
+        <div class="title-bar">
+          <div>Composer</div>
+          <h1>Molly Teleman</h1>
+
+          <ul class="navigation">
+            <li><a href="#news">News</a></li>
+            <li><a href="#listento">Listen to</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#press">Press Photos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row section-row">
+        <h2><a name="news">News</a></h2>
+      </div>
+      <div class="row section-content">
+        <h3>Norrköpingsljud 27-31 maj</h3>
+        <p>....</p>
+        <div class="fb-like-box" data-href="https://www.facebook.com/norrkopingsljud" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="false" data-show-border="false"></div>
+      </div>
+
+      <div class="row section-row">
+        <h2><a name="listento">Listen To</a></h2>
+      </div>
+      <div class="row section-content">
+        <p>Som en våg</p>
+        <audio controls><source type='audio/mpeg' src="musik/Som%20en%20vag.mp3"></audio>
+
+        <p>Pulse</p>
+        <audio controls><source type='audio/mpeg' src="musik/Pulse.mp3"></audio>
+
+        <p>Scroll down to 'Works' if you want to hear some more!</p>
+      </div>
+
+
+
+      <div class="row section-row">
+        <h2><a name="works">Works</a></h2>
+      </div>
+      <div class="row section-content">
+        <p>Sort works by 
+          <span class="slider sort-by">
+            <span class="selected" data-sortby="year" href="#">Year</span>
+            <span data-sortby="title" href="#">Title</span> 
+            <span data-sortby="type" href="#">Genre</span>             
+          </span>
+
+          and Show 
+          <span class="slider show-only">
+            <span class="selected" data-show="all" href="#">All</span>
+            <span data-show="Choir" href="#">Choir</span>
+            <span data-show="Chamber Music" href="#">Chamber Music</span>
+            <span data-show="Orchestra" href="#">Orchestra</span>
+          </span>
+        </p>
+
+        <div class="album-flow">
+          <div class="album-flow-holder"></div>
+        </div>
+        <div class="album-player">
+          <label>Genre</label><span id="player-type"></span>
+          <label>Title</label><span id="player-title"></span>
+          <label>Description</label><span id="player-desc"></span>
+          <label>Length</label><span id="player-length"></span>
+          <label>Commissioned</label><span id="player-commissioned"></span>
+          <div class="audio-player"></div>
+        </div>
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider"></div>
+      </div>
+
+
+      <div class="row section-row">
+        <h2><a name="biography">Biography</a></h2>
+        <span>
+        <a id="bio_lang" class="lang-link" href="#"><span id="bio_lang_label">visa på svenska</span> <span class="glyphicon glyphicon-info-sign"></span></a>
+        </span>
+      </div>
+      <div class="row section-content">
+        <div id="bio"></div>
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider"></div>
+      </div>
+
+
+      <div class="row section-row">
+        <h2><a name="contact">Contact</a></h2>
+      </div>
+      <div class="row section-content contact-section" id="contact">
+        <div class="circle-photo"></div>
+        <p>
+        <p>phone: 070 251 73 52</p>
+        <p>email: <a href="mailto:info@mollyteleman.se">info@mollyteleman.se</a></p>
+        </p>
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider image-divider-2">
+          <img src="mt4.png" width="400px" style="margin-bottom:-5px;"/>
+        </div>
+      </div>
+
+      <div class="row section-row">
+        <h2><a name="press">Press Photos</a></h2>
+      </div>
+      <div class="row section-content">
+        <ul class="press-photos">
+          <li><a href="mt.jpg"><img src="mt.jpg"/></a></li>
+          <li><a href="mt3.jpg"><img src="mt3.jpg"/></a></li>
+          <li><a href="mt4.jpg"><img src="mt4.jpg"/></a></li>
+        </ul>
+        <p class="copyright">
+          Photographs and art work by Stefan Teleman.
+        </p>
+      </div>
+
+
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var currentLanguage = "en";
+        $("#bio").load("bio_en.html");
+        $("#bio_lang").click(function () {
+          currentLanguage = currentLanguage === "en" ? "sv" : "en";
+          $("#bio").load("bio_" + currentLanguage + ".html");
+          $("#bio_lang_label").text(currentLanguage === "en" ? "visa på svenska" : "show in english");
+        });
+
+
+        var imageDividers = $(".image-divider");
+        var titleBar = $(".title-bar");
+        $(window).scroll(function (event) {
+          var pos = $(window).scrollTop();
+          var height = $(document).height();
+          imageDividers.each(function (i) {
+            i = 0;
+            var x = $(this);
+            var y = Math.min(95, Math.max(0, i*40 + (pos/height) * 100));
+            x.css("background-position", "50% " + y + "%");
+          });
+          var y = Math.min(95, Math.max(0, (pos/height) * 400));
+          titleBar.css("background-position", "50% " + y + "%");
+        });
+
+        // create album flow
+
+        var seed = 1;
+        function random() {
+          var x = Math.sin(seed++) * 10000;
+          return x - Math.floor(x);
+        }
+
+        var works = [];
+        var sortBy = "year";
+        var showOnly = "all";
+
+        var holder = $(".album-flow-holder");
+
+        function generateAlbum(work) {
+          var album = $('<div class="album"></div>');
+          album.css("background-position", Math.round(random() * 80) + "% " + Math.round(random() * 80) + "%");
+          var title = $('<div class="album-title"></div>');
+          title.text(work.title);
+          album.append(title);
+          var year = $("<div class='album-year'></div>");
+          year.text(work.year);
+          album.append(year);
+          return album;
+        }
+
+        var renderWorks = function () {
+          works.sort(function (a, b) { // always sort by year first
+            return b.year - a.year;
+          });
+
+          if(sortBy === "title") {
+            works.sort(function (a, b) {
+              return a.title.localeCompare(b.title);
+            });
+          } else if(sortBy === "type") {
+            works.sort(function (a, b) {
+              return a.type.localeCompare(b.type);
+            });
+          }
+
+          var filteredWorks = works;
+          if(showOnly !== "all") {
+            filteredWorks = [];
+            works.forEach(function (w) {
+              if(w.type === showOnly) { filteredWorks.push(w); }
+            })
+          }
+
+          holder.html("");
+          filteredWorks.forEach(function (work, i) {
+            var album = generateAlbum(work);
+            if(i == 0) { album.addClass("selected"); }
+            holder.append(album);
+          });
+
+          $(".album").click(function () {
+            $(".album").removeClass("selected");
+            $(this).addClass("selected");
+            var i = $(this).index();
+            var work = filteredWorks[i];
+            $(".album-flow").animate({scrollLeft: 205 * i}, 200);
+            $("#player-title").text(work.title);
+            $("#player-type").text(work.type);
+            $("#player-desc").text(work.desc || "-");
+            $("#player-length").text(work.length);
+            $("#player-commissioned").text(work.commissioned || "-");
+
+            if(work.audio) {
+              var p = $("<audio controls><source type='audio/mpeg'></audio>");
+              p.find("source").attr("src", work.audio);
+              $(".audio-player").html(p);
+            } else {
+              $(".audio-player").html("");              
+            }
+            $("source").attr("src", work.audio);
+          });
+
+          $(".album.selected").trigger("click");
+        }
+
+        $.getJSON("works.json", function (ws) {
+          works = ws;
+
+          renderWorks()
+        });
+
+        $(".sort-by > span").click(function () {
+          $(".sort-by > span").removeClass("selected");
+          $(this).addClass("selected");          
+          sortBy = $(this).data("sortby");
+          renderWorks();
+        })
+        $(".show-only > span").click(function () {
+          $(".show-only > span").removeClass("selected");
+          $(this).addClass("selected");          
+          showOnly = $(this).data("show");
+          renderWorks();
+        });
+
+      }) 
+    </script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=158797814244626&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </body>
+</html>
