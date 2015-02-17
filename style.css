@@ -202,6 +202,7 @@ h1 {
 	padding-right:4px;
 	padding-left:4px;
 	margin-right:-2px;
+	margin-bottom:2px;
 	border-radius: 4px;
 }
 
@@ -252,12 +253,12 @@ h1 {
 
 .album-player > label {
 	display: inline-block;
-	width: 30%;
+	width: 35%;
 	font-weight: bold;
 }
 .album-player > span {
 	display: inline-block;
-	width:70%;
+	width:65%;
 }
 
 .audio-player {
@@ -283,6 +284,7 @@ h1 {
 .album.selected {
 	border:2px solid #cacaca;
 	box-shadow: 0px 0px 2px 6px #000;
+	-webkit-box-shadow: 0px 0px 2px 6px #000;
 	-webkit-transform:scale(1.1);
 }
 .fa:hover {
