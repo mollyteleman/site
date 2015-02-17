@@ -275,6 +275,7 @@ h1 {
 	margin-right:25px;
 	margin-bottom:30px;
 	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	overflow:hidden;
 }
 
 .album:last-child {
