@@ -404,7 +404,7 @@ ul.press-photos > li img {
 
 	.audio-player {
 		position: absolute;
-		bottom: 0px;
+		bottom: 5px;
 	}
 
 	.album-player {
