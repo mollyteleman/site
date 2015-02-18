@@ -346,6 +346,7 @@ span.button:hover {
 	vertical-align: middle;
 	margin-right:25px;
 	-webkit-transition: -webkit-transform 0.2s ease-in-out;
+	transition: transform 0.2s ease-in-out;
 	overflow:hidden;
 	white-space: nowrap;
 }
@@ -373,7 +374,9 @@ span.button:hover {
 
 .album.selected {
 	border:4px solid #000;
+	-ms-transform:scale(1.1);
 	-webkit-transform:scale(1.1);
+	transform:scale(1.1);
 }
 .album.selected > .album-title {
 	color:#000;

@@ -159,6 +159,12 @@
     <script src="lib/jquery.min.js"></script>
     <script type="text/javascript">
       $(function () {
+        if(!Array.prototype.forEach) {
+          Array.prototype.forEach = function (fn) {
+            for(var i = 0; i < this.length; i++) { fn(this[i], i); }
+          }
+        }
+
         var currentLanguage = "en";
         $("#bio").load("bio_en.html");
         $("#bio_lang").click(function (event) {
