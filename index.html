@@ -53,7 +53,17 @@
         <audio controls preload="none"><source type='audio/mpeg' src="musik/Pulse.mp3"></audio>
 
         <p>A Portrait of the Artist As a Young Woman - Unge Musikere</p>
-        <audio controls preload="none"><source type='audio/mpeg' src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3"></audio>
+        <p>
+          Play part <span class="slider artist-part">
+            <span data-src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3" class="selected">1</span>
+            <span data-src="musik/portrait/2.%20Fuga%20de%20Reàlta%20-%20Escape%20from%20Reality.mp3">2</span> 
+            <span data-src="musik/portrait/3.%20Intransigente%20-%20Without%20compromises.mp3">3</span> 
+            <span data-src="musik/portrait/4.%20Fiero%20-%20Proud.mp3">4</span> 
+          </span>
+        </p>
+        <p id="artist-player">
+          <audio controls preload="none"><source id="artist-source" type='audio/mpeg' src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3"></audio>
+        </p>
 
         <p>Taigan vaknar - Träblås- och stråkkvintett</p>
         <audio controls preload="none"><source type='audio/mpeg' src="musik/Taigan%20vaknar.mp3"></audio>
@@ -156,6 +166,15 @@
           currentLanguage = currentLanguage === "en" ? "sv" : "en";
           $("#bio").load("bio_" + currentLanguage + ".html");
           $("#bio_lang_label").text(currentLanguage === "en" ? "visa på svenska" : "show in english");
+        });
+
+        $(".artist-part > span").click(function () {
+          var dom = $("<audio controls preload='none'><source type='audio/mpeg'></audio>");
+          var src = $(this).data("src");
+          $(".artist-part > span").removeClass("selected");
+          $(this).addClass("selected");
+          dom.find("source").attr("src", src);
+          $("#artist-player").html(dom);
         });
 
 

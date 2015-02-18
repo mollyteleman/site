@@ -164,6 +164,7 @@ h1 {
 	padding-bottom:10px;
 }
 
+
 .circle-photo {
     background-repeat: no-repeat;
     background-position: 50%;
@@ -227,6 +228,10 @@ h1 {
 	background:#A1B2D0;
 }
 
+.artist-part > span {
+	padding-left:20px;
+	padding-right:20px;
+}
 
 span.button {
 	background:#999;
