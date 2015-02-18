@@ -207,6 +207,9 @@ h1 {
 	padding-bottom:4px;
 	display:inline-block;
 	margin-right:2px;
+	-moz-user-select: none;
+  	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .slider > span {
