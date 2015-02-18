@@ -416,6 +416,11 @@ ul.press-photos > li img {
 	margin-left:-5px;
 }
 
+a, img {
+    border: 0px;
+    outline: 0px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
