@@ -312,8 +312,8 @@ span.button:hover {
 .worklist {
 	padding:5px;
 	margin-top:2px;
-	background: -webkit-linear-gradient(#DCDEE4, #CED5E0);	height:200px;
-	background: linear-gradient(#DCDEE4, #CED5E0);	height:200px;
+	background: -webkit-linear-gradient(#DCDEE4, #CED5E0);
+	background: linear-gradient(#DCDEE4, #CED5E0);
 	position: relative;
 	font-size:14px;
 }
