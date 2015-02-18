@@ -241,6 +241,9 @@ h1 {
 }
 
 span.button {
+	-moz-user-select: none;
+  	-webkit-user-select: none;
+	-ms-user-select: none;
 	background:#bebebe;
 	display:inline-block;
 	padding-right:4px;
