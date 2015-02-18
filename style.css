@@ -22,6 +22,7 @@ p {
 }
 
 body {
+	background:-webkit-linear-gradient(#A0C7E4, #DBE5FF);
 	background:linear-gradient(#A0C7E4, #DBE5FF);
 }
 
@@ -124,6 +125,7 @@ h1 {
 }
 .navigation > li {
 	display:inline-block;
+	background:-webkit-linear-gradient(#A0C7E4, #DBE5FF);
 	background:linear-gradient(#A0C7E4, #DBE5FF);
 	padding-left:4px;
 	padding-right:4px;
@@ -135,6 +137,7 @@ h1 {
 	font-family: 'Crushed';
 }
 .navigation > li:hover {
+	background:-webkit-linear-gradient(#608FB2, #DBE5FF);
 	background:linear-gradient(#608FB2, #DBE5FF);
 }
 .navigation > li > a:hover {
@@ -249,6 +252,7 @@ span.button:hover {
 
 
 .album-flow {
+	background: -webkit-linear-gradient(#A5B8D2, #fff);
 	background: linear-gradient(#A5B8D2, #fff);
 	height:230px;
 	margin-right: -15px;
@@ -271,6 +275,7 @@ span.button:hover {
 .album-player {
 	padding:5px;
 	margin-top:2px;
+	background: -webkit-linear-gradient(#AAABB0, #98A6BD);
 	background: linear-gradient(#AAABB0, #98A6BD);
 	margin-left:-10px;
 	margin-right:-10px;
@@ -307,6 +312,7 @@ span.button:hover {
 .worklist {
 	padding:5px;
 	margin-top:2px;
+	background: -webkit-linear-gradient(#DCDEE4, #CED5E0);	height:200px;
 	background: linear-gradient(#DCDEE4, #CED5E0);	height:200px;
 	position: relative;
 }
