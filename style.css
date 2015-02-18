@@ -315,17 +315,17 @@ span.button:hover {
 	background: -webkit-linear-gradient(#DCDEE4, #CED5E0);	height:200px;
 	background: linear-gradient(#DCDEE4, #CED5E0);	height:200px;
 	position: relative;
+	font-size:14px;
 }
 .worklist > label {
 	font-family: 'Crushed';
-}
-
-.worklist > label {
+	vertical-align: top;
 	display: inline-block;
 	width: 35%;
 	font-weight: bold;
 }
 .worklist > span {
+	vertical-align: top;
 	display: inline-block;
 	width:65%;
 }
@@ -519,6 +519,10 @@ a, img {
 		min-height:200px;
 	}
 	.contact-info {
+		font-size:18px;
+	}
+
+	.worklist {
 		font-size:18px;
 	}
 }
