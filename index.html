@@ -105,8 +105,9 @@
           <div class="audio-player"></div>
         </div>
 
-        <p class="all-works">
+        <p>
           <span class="show-worklist button">Show entire worklist</span>
+          <p class="all-works"></p>
         </p>
       </div>
 
@@ -284,9 +285,17 @@
           $(".album.selected").trigger("click");
         }
 
+        var showingWorks = false;
         $(".show-worklist").click(function () {
+
+          showingWorks = !showingWorks;
+          $(this).text(showingWorks ? "Hide worklist" : "Show entire worklist");
+
           var allWorks = $(".all-works");
           allWorks.html("")
+
+          if(!showingWorks) { return; }
+
           var appendWork = function (work) {
             var entry = $("<div class='worklist'><label>Title</label><span class='worklist-title'></span><label>Genre</label><span class='worklist-type'></span><label>Description</label><span class='worklist-desc'></span><label>Length</label><span class='worklist-length'></span><label>Commissioned</label><span class='worklist-commissioned'></span><label>Available at</label><span class='worklist-available'></span></div>");
             entry.find(".worklist-title").text(work.title + " (" + work.year + ")");
