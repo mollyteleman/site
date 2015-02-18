@@ -17,7 +17,7 @@
 
           <ul class="navigation">
             <li><a href="#news">News</a></li>
-            <li><a href="#listento">Listen to</a></li>
+            <li><a href="#listen">Listen</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#biography">Biography</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -36,21 +36,27 @@
       </div>
 
       <div class="image-divider-row">
-        <div class="image-divider image-divider-2">
+        <div class="image-divider bg50">
           <img src="mt4.png" class="pressdivider"/>
         </div>
       </div>
 
 
       <div class="row section-row">
-        <h2><a name="listento">Listen To</a></h2>
+        <h2><a name="listen">Listen</a></h2>
       </div>
       <div class="row section-content">
-        <p>Som en våg</p>
+        <p>Som en våg - Musikaliska Sällskapets Kammarkör</p>
         <audio controls preload="none"><source type='audio/mpeg' src="musik/Som%20en%20vag.mp3"></audio>
 
-        <p>Pulse</p>
+        <p>Pulse - Forsvarets Musikkorps</p>
         <audio controls preload="none"><source type='audio/mpeg' src="musik/Pulse.mp3"></audio>
+
+        <p>A Portrait of the Artist As a Young Woman - Unge Musikere</p>
+        <audio controls preload="none"><source type='audio/mpeg' src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3"></audio>
+
+        <p>Taigan vaknar - Träblås- och stråkkvintett</p>
+        <audio controls preload="none"><source type='audio/mpeg' src="musik/Taigan%20vaknar.mp3"></audio>
 
         <p>Scroll down to 'Works' if you want to hear some more!</p>
       </div>
@@ -88,6 +94,10 @@
           <label>Available at</label><span id="player-available"></span>
           <div class="audio-player"></div>
         </div>
+
+        <p class="all-works">
+          <span class="show-worklist button">Show entire worklist</span>
+        </p>
       </div>
 
       <div class="image-divider-row">
@@ -156,7 +166,7 @@
           var height = $(document).height();
           imageDividers.each(function (i) {
             var x = $(this);
-            var y = Math.min(95, Math.max(0, (pos/height) * 100));
+            var y = Math.min(95, Math.max(0, 10 + (pos/height) * 100));
             if(i === 0) { y = Math.min(95, y + 50); }
 
             x.css("background-position", "50% " + y + "%");
@@ -249,6 +259,45 @@
           $(".album.selected").trigger("click");
         }
 
+        $(".show-worklist").click(function () {
+          var allWorks = $(".all-works");
+          allWorks.html("")
+          var appendWork = function (work) {
+            var entry = $("<div class='worklist'><label>Title</label><span class='worklist-title'></span><label>Genre</label><span class='worklist-type'></span><label>Description</label><span class='worklist-desc'></span><label>Length</label><span class='worklist-length'></span><label>Commissioned</label><span class='worklist-commissioned'></span><label>Available at</label><span class='worklist-available'></span></div>");
+            entry.find(".worklist-title").text(work.title + " (" + work.year + ")");
+            entry.find(".worklist-type").text(work.type);
+            entry.find(".worklist-desc").text(work.desc || "-");
+            entry.find(".worklist-length").text(work.length);
+            entry.find(".worklist-commissioned").text(work.commissioned || "-");
+            entry.find(".worklist-available").html(work.available || "Contact me");
+            allWorks.append(entry);
+          }
+          allWorks.append($("<h3>Orchestra</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Orchestra") { appendWork(w); }
+          })
+          allWorks.append($("<h3>Choir</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Choir") { appendWork(w); }
+          });
+          allWorks.append($("<h3>Chamber Music</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Chamber Music") { appendWork(w); }
+          });
+        });
+
+        var timeSinceScroll = -1;
+        setInterval(function checkScrollEnd() {
+          if(timeSinceScroll !== -1 && new Date().getTime() - 100 > timeSinceScroll) {
+            var i = Math.round(flow.scrollLeft() / 205);
+            if(filteredWorks[i]) {
+              flow.animate({scrollLeft: 205 * i}, 200);
+            }
+
+            timeSinceScroll = -1;
+          }
+        }, 100);
+
         flow.scroll(function () {
           var i = Math.round(flow.scrollLeft() / 205);
           var work = filteredWorks[i];
@@ -256,8 +305,9 @@
             $(".album").removeClass("selected");
             $($(".album").get(i)).addClass("selected");
             updatePlayer(work);
+            timeSinceScroll = new Date().getTime();
           }
-        })
+        });
 
         $.getJSON("works.json", function (ws) {
           works = ws;

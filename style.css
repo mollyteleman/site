@@ -66,7 +66,11 @@ body {
 	min-height:50px;
 	background-image:url("holk/holk1.jpg");
 	background-size:110%;
-	background-position: 50% 0%
+	background-position: 50% 10%
+}
+
+.bg50 {
+	background-position: 50% 60%	
 }
 
 .image-divider-2 {
@@ -212,8 +216,32 @@ h1 {
 
 .slider > span.selected {
 	color:#111;
+}
+
+.slider > span:hover {
+	background:#aaa;
+	color:#333;
+}
+
+.slider > span.selected {
 	background:#A1B2D0;
 }
+
+
+span.button {
+	background:#999;
+	display:inline-block;
+	padding-right:4px;
+	padding-left:4px;
+	margin-right:-2px;
+	margin-bottom:2px;
+	border-radius: 4px;
+}
+
+span.button:hover {
+	background:#aaa;
+}
+
 
 .album-flow {
 	background: linear-gradient(#A5B8D2, #fff);
@@ -269,6 +297,29 @@ h1 {
 	display: inline-block;
 	width:65%;
 }
+
+
+.worklist {
+	padding:5px;
+	margin-top:2px;
+	background: linear-gradient(#DCDEE4, #CED5E0);	height:200px;
+	position: relative;
+}
+.worklist > label {
+	font-family: 'Crushed';
+}
+
+.worklist > label {
+	display: inline-block;
+	width: 35%;
+	font-weight: bold;
+}
+.worklist > span {
+	display: inline-block;
+	width:65%;
+}
+
+
 
 .audio-player {
 	margin-top:5px;
