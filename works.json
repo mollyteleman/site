@@ -1,4 +1,5 @@
 [
+	{"type": "Chamber Music", "title": "Strömmen", "desc": "Clarinet Bb and Marimba. Fun on a folk note", "commissioned": "commissioned by Duo Marinett", "length": "5'", "year": 2014},
 	{"type":"Orchestra", "title":"Flodenyr", "year": 2000, "desc": "Intermezzo for chamber orchestra", "length": "5'", "commissioned": ""},
 	{"type":"Orchestra", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>","audio": "musik/Taigan%20vaknar.mp3","title":"Taigan vaknar", "year": 2004, "desc": "Balalajkaorkester. Is available in arrangement for strings and woodwinds; flute, 2 clarinets and string quintet", "length": "ca 8'", "commissioned": "Commissioned by Bråvikens Balalajkor"},
 	{"type":"Orchestra", "available": "<a href='http://www.mic.stim.se/'>Svensk Musik</a>","audio": "musik/Pulse.mp3", "title":"Pulse", "year": 2006, "desc": "Windband", "length": "2'", "commissioned": "Commissioned by Forsvarets Musikkorps in Bergen, Norway"},
