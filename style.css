@@ -19,6 +19,12 @@ h3:first-child {
 	margin-top:0px;
 }
 
+hr {
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+
 audio {
 	max-width:100%;
 }
@@ -47,8 +53,14 @@ body {
 }
 
 .row li {
+	margin-left:35px;
+	font-style:bold;
+}
+
+.list2 > li {
 	list-style-type: none;
-	margin-left:15px;
+	margin-left:0px;
+	font-size:14px;
 }
 
 .photo {
