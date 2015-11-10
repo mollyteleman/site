@@ -6,7 +6,9 @@ h2, * {
 	margin:0px;
 	font-family: "Crimson Text";
 }
-
+.infotext {
+	font-size: 16px;
+}
 h2 {
 	display:inline;
 	font-size:26px;
@@ -60,7 +62,7 @@ body {
 .list2 > li {
 	list-style-type: none;
 	margin-left:0px;
-	font-size:14px;
+	font-size:16px;
 }
 
 .photo {
