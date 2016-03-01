@@ -106,9 +106,6 @@
           <audio controls preload="none"><source id="artist-source" type='audio/mpeg' src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3"></audio>
         </p>
 
-        <p>Taigan vaknar - Träblås och stråkkvintett</p>
-        <audio controls preload="none"><source type='audio/mpeg' src="musik/Taigan%20vaknar.mp3"></audio>
-
         <p>Scroll down to 'Works' if you want to hear some more!</p>
       </div>
 
@@ -142,6 +139,7 @@
           <label>Description</label><span id="player-desc"></span>
           <label>Length</label><span id="player-length"></span>
           <label>Commissioned</label><span id="player-commissioned"></span>
+          <label id="player-premiered-label">Premiered</label><span id="player-premiered"></span>
           <label>Available at</label><span id="player-available"></span>
           <div class="audio-player"></div>
         </div>
@@ -283,6 +281,18 @@
             $("#player-length").text(work.length);
             $("#player-commissioned").text(work.commissioned || "-");
             $("#player-available").html(work.available || "Contact me");
+
+            if(work.premiered) {
+              $("#player-premiered").text(work.premiered);
+              $("#player-premiered-label").show();
+              $("#player-premiered").show();
+              $(".album-player").css("height", "240px");
+            } else {
+              $("#player-premiered-label").hide();              
+              $("#player-premiered").hide();
+              $(".album-player").css("height", "");
+            }
+
 
             if(work.audio) {
               var p = $("<audio controls preload='none'><source type='audio/mpeg'></audio>");
