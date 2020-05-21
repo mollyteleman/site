@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Molly Teleman - Composer</title>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Crushed|Fjord+One|Nova+Square|Trochut|Codystar|Ruthie|Crimson+Text|Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main container">
+      <div class="title-divider-row">
+        <div class="title-bar">
+          <div>Composer</div>
+          <h1>Molly Teleman</h1>
+
+          <ul class="navigation">
+            <li><a href="#news">News</a></li>
+            <li><a href="#listen">Listen</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#press">Press</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row section-row">
+        <h2><a name="news">Nyheter</a></h2>
+      </div>
+      <div class="row section-content">
+        <p><b>***ARBETE PÅGÅR körmusik och musik till en konstutställning under 2021***<b></p>
+
+<p>Jag är tillbaka efter mer än ett år, en inte helt enkel graviditet men en mycket roligare mammaledighet! Vid slutet av 2018 blev jag äntligen färdig med min körkomposition Clare Coast med text av Emily Lawless (1845-1913). En komposition som jag började på mycket tidigare men var tvungen att sluta arbeta med på grund av en hemsk lunginflammation vintern 2015-16. Texten är så spännande, dramatisk, lyrisk och har både värme och mörker i sig. Det var meningen att tonsättningen skulle vara för manskör men när jag återupptog arbetet med den reviderade jag det jag hade gjort och nu är den för blandad kör. Clare Coast är ca sex minuter lång.</p>
+
+<p>Andra nyheter är att Som en våg är inspelad och du kan höra den, så vackert framförd och producerad på den underbara skivan Rivers of Light. Östgöta Kammarkör leds av sin konstnärliga ledare Christina Hörnell. Du kan köpa skivan på Linköpings Universitets profilshop för 125 kronor (följ den här <a href="https://www.shop.liu.se/produkt/cd-skiva-ostgota-kammarkor-rivers-of-light/">länken</a>)</p> 
+
+<p>Snart kommer det finnas noter till Hope (is the thing with feathers) inspirerad av dikten av Emily Dickinson. Den urframfördes i maj 2018 av kulturskoleelever från Norrköping vid festivalen Norrköpingsljud som presenterar ny musik från stadens tonsättare. Musiken är för flöjt, Bb-klarinett, marimba, violin, viola och cello och är omkring nio minuter lång. Musiken är lekfull och melodisk med en del motiverande utmaningar för den avancerade musikeleven.</p>   
+
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider bg50">
+        </div>
+      </div>
+
+
+      <div class="row section-row">
+        <h2><a name="listen">Listen</a></h2>
+      </div>
+      <div class="row section-content">
+        <p>Som en våg - Musikaliska Sällskapets Kammarkör</p>
+        <audio controls preload="none"><source type='audio/mpeg' src="musik/Som%20en%20vag.mp3"></audio>
+
+        <p>Pulse - Forsvarets Musikkorps</p>
+        <audio controls preload="none"><source type='audio/mpeg' src="musik/Pulse.mp3"></audio>
+
+        <p>A Portrait of the Artist As a Young Woman - Unge Musikere</p>
+        <p>
+          Play part <span class="slider artist-part">
+            <span data-src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3" class="selected">1</span>
+            <span data-src="musik/portrait/2.mp3">2</span> 
+            <span data-src="musik/portrait/3.%20Intransigente%20-%20Without%20compromises.mp3">3</span> 
+            <span data-src="musik/portrait/4.%20Fiero%20-%20Proud.mp3">4</span> 
+          </span>
+        </p>
+        <p id="artist-player">
+          <audio controls preload="none"><source id="artist-source" type='audio/mpeg' src="musik/portrait/1.%20Provocatorio%20-%20Provocative.mp3"></audio>
+        </p>
+
+        <p>Scroll down to 'Works' if you want to hear some more!</p>
+      </div>
+
+
+
+      <div class="row section-row without-divider">
+        <h2><a name="works">Works</a></h2>
+      </div>
+      <div class="row section-content">
+        <p>Sort works by 
+          <span class="slider sort-by">
+            <span class="selected" data-sortby="year" href="#">Year</span>
+            <span data-sortby="title" href="#">Title</span> 
+          </span>
+
+          and Show 
+          <span class="slider show-only">
+            <span class="selected" data-show="all" href="#">All</span>
+            <span data-show="Choir" href="#">Choir</span>
+            <span data-show="Chamber Music" href="#">Chamber Music</span>
+            <span data-show="Orchestra" href="#">Orchestra</span>
+          </span>
+        </p>
+
+        <div class="album-flow">
+          <div class="album-flow-holder"></div>
+        </div>
+        <div class="album-player">
+          <label>Title</label><span id="player-title"></span>
+          <label>Genre</label><span id="player-type"></span>
+          <label>Description</label><span id="player-desc"></span>
+          <label>Length</label><span id="player-length"></span>
+          <label>Commissioned</label><span id="player-commissioned"></span>
+          <label id="player-premiered-label">Premiered</label><span id="player-premiered"></span>
+          <label>Available at</label><span id="player-available"></span>
+          <div class="audio-player"></div>
+        </div>
+
+        <p>
+          <span class="show-worklist button">Show entire worklist</span>
+          <p class="all-works"></p>
+        </p>
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider"></div>
+      </div>
+
+
+      <div class="row section-row">
+        <h2><a name="biography">Biography</a></h2>
+      </div>
+      <div class="row section-content">
+<p>Molly Teleman, född 1982, är en svensk kompositör bosatt i Östergötland. Som barn tog hon piano- och sånglektioner och när hon började på Musikgymnasiet DeGeer, en musiklinje med yrkesprofil, började hon även studera komposition för tonsättaren David Swärd. Hon fortsatte spela piano och sjunga, men komponerandet blev allt mer dominerande allt eftersom tiden gick.</p>
+
+<p>Musiklinjen på Ingesunds Folkhögskola ledde vidare till kompositionsstudier på Musikhögskolan Ingesund för Sverker Magnusson. Efter fyra år i Arvika flyttade hon till Bergen, Norge, och Griegakademiet på Bergens Universitet. Hon studerade där för Morten Eide Pedersen i två år, med gästföreläsare som Kaija Saariaho och Bent Sørensen med flera. Molly Teleman tog sin bachelor i fine arts, composition 2007.</p>
+
+<p>Efter examen återvände hon till sin hemstad Norrköping och studerade kulturjournalistik, idéhistoria, litteraturvetenskap och kreativt skrivande. Hon tog en masterexamen i Biblioteks- och Informationsvetenskap 2018. </p>
+
+<p>Molly Teleman komponerar för alla akustiska ensembleformer, men är än så länge särskilt entusiastisk för kör och kammarmusik. Hennes musik har blivit framförd av ensembler som Forsvarets Musikkorps, Unge Musikere, Musikaliska Sällskapets Kammarkör, Östgöta Kammarkör, KFUM:s Kammarkör, Linköpings Studentsångare, bland flera. Hennes musik har framförts på Borealis Festival, Norrköpingsljud och Sound of Stockholm.</p>
+
+<p>Dessutom har hon arbetat som musik- och filmkritiker i Östergötland sedan 2007, i tidningar som Norrköpings Tidningar och Östgöta Correspondenten. Sedan 2014 har hon skrivit verkkommentarer till programblad för symfoniorkestrar som Norrköpings symfoniorkester (SON) och Göteborgs Symfoniorkester (GSO). </p>
+
+<p>Hon är medlem i STIM, FST (Föreningen Svenska Tonsättare) och KVAST (Kvinnlig Anhopning av Svenska Tonsättare).</p>
+      </div>
+
+      <div class="image-divider-row">
+        <div class="image-divider"></div>
+      </div>
+
+      <div class="row section-row">
+        <h2><a name="contact">Contact</a></h2>
+      </div>
+      <div class="row section-content contact-section" id="contact">
+        <div class="circle-photo"></div>
+        <div class="contact-info">
+          <p>Phone: <span>070 251 73 52</span></p>
+          <p>Email: <a href="mailto:info@mollyteleman.se">info@mollyteleman.se</a></p>
+        </div>
+      </div>
+
+      <div class="row section-row without-divider">
+        <h2><a name="press">Press</a></h2>
+      </div>
+      <div class="row section-content">
+        <p>
+          <blockquote>I Jorden skall minnas dig bygger Teleman upp en gedigen komposition med dramatiska ansatser och kromatiska bergsvandringar i dödens gränsland. Ur diktsamlingen Hjärtats sånger har texten till Som en våg hämtats. Teleman låter dock inte sin stämföring förföras av några känslosvall på ytan utan komplicerar den sensuella ambivalensen  genom spänningar som slutligen mynnar mot den ensamma klangen. Ett harmoniskt vågspel.</blockquote>
+          <span class="quotespan">Michael Eriksson, NT 29/3-2010</span>
+        </p>
+
+        <ul class="press-photos">
+          <li><a href="press/pressbild.jpg"><img style="width:300px;" src="press/pressbild.jpg"/></a></li>
+          <li><a href="press/Pressbild2.jpg"><img style="width:300px;" src="press/Pressbild2.jpg"/></a></li>
+        </ul>
+        <p class="copyright">
+          Artwork by Stefan Teleman.
+          Layout by Tobias and Molly Teleman
+        </p>
+      </div>
+
+
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        if(!Array.prototype.forEach) {
+          Array.prototype.forEach = function (fn) {
+            for(var i = 0; i < this.length; i++) { fn(this[i], i); }
+          }
+        }
+
+        $(".artist-part > span").click(function () {
+          var dom = $("<audio controls preload='none'><source type='audio/mpeg'></audio>");
+          var src = $(this).data("src");
+          $(".artist-part > span").removeClass("selected");
+          $(this).addClass("selected");
+          dom.find("source").attr("src", src);
+          $("#artist-player").html(dom);
+        });
+
+
+        var imageDividers = $(".image-divider");
+        var titleBar = $(".title-bar");
+        $(window).scroll(function (event) {
+          var pos = $(window).scrollTop();
+          var height = $(document).height();
+          imageDividers.each(function (i) {
+            var x = $(this);
+            var y = Math.min(95, Math.max(0, 10 + (pos/height) * 100));
+            if(i === 0) { y = Math.min(95, y + 50); }
+
+            x.css("background-position", "50% " + y + "%");
+          });
+          var y = Math.min(95, Math.max(0, (pos/height) * 400));
+          titleBar.css("background-position", "50% " + y + "%");
+        });
+
+        // create album flow
+
+        var seed = 1;
+        function random() {
+          var x = Math.sin(seed++) * 10000;
+          return x - Math.floor(x);
+        }
+
+        var works = [];
+        var filteredWorks = [];
+        var sortBy = "year";
+        var showOnly = "all";
+
+        var holder = $(".album-flow-holder");
+
+        function generateAlbum(work) {
+          var album = $('<div class="album"></div>');
+          album.css("background-position", Math.round(random() * 80) + "% " + Math.round(random() * 80) + "%");
+          var title = $('<div class="album-title"></div>');
+          title.text(work.title);
+          album.append(title);
+          var year = $("<div class='album-year'></div>");
+          year.text(work.year);
+          album.append(year);
+          return album;
+        }
+
+        var flow = $(".album-flow");
+
+        var updatePlayer = function (work) {
+            $("#player-title").text(work.title);
+            $("#player-type").text(work.type);
+            $("#player-desc").text(work.desc || "-");
+            $("#player-length").text(work.length);
+            $("#player-commissioned").text(work.commissioned || "-");
+            $("#player-available").html(work.available || "Contact me");
+
+            if(work.premiered) {
+              $("#player-premiered").text(work.premiered);
+              $("#player-premiered-label").show();
+              $("#player-premiered").show();
+              $(".album-player").css("height", "240px");
+            } else {
+              $("#player-premiered-label").hide();              
+              $("#player-premiered").hide();
+              $(".album-player").css("height", "");
+            }
+
+
+            if(work.audio) {
+              var p = $("<audio controls preload='none'><source type='audio/mpeg'></audio>");
+              p.find("source").attr("src", work.audio);
+              $(".audio-player").html(p);
+            } else {
+              $(".audio-player").html("");              
+            }
+        }
+
+        var renderWorks = function () {
+          works.sort(function (a, b) { // always sort by year first
+            return b.year - a.year;
+          });
+
+          if(sortBy === "title") {
+            works.sort(function (a, b) {
+              return a.title.localeCompare(b.title);
+            });
+          }
+
+          filteredWorks = works;
+          if(showOnly !== "all") {
+            filteredWorks = [];
+            works.forEach(function (w) {
+              if(w.type === showOnly) { filteredWorks.push(w); }
+            })
+          }
+
+          holder.html("");
+          filteredWorks.forEach(function (work, i) {
+            var album = generateAlbum(work);
+            if(i == 0) { album.addClass("selected"); }
+            holder.append(album);
+          });
+
+          $(".album").click(function () {
+            $(".album").removeClass("selected");
+            $(this).addClass("selected");
+            var i = $(this).index();
+            var work = filteredWorks[i];
+            flow.animate({scrollLeft: 205 * i}, 200);
+            updatePlayer(work);
+          });
+
+          $(".album.selected").trigger("click");
+        }
+
+        var showingWorks = false;
+        $(".show-worklist").click(function () {
+
+          showingWorks = !showingWorks;
+          $(this).text(showingWorks ? "Hide worklist" : "Show entire worklist");
+
+          var allWorks = $(".all-works");
+          allWorks.html("")
+
+          if(!showingWorks) { return; }
+
+          var appendWork = function (work) {
+            var entry = $("<div class='worklist'><label>Title</label><span class='worklist-title'></span><label>Genre</label><span class='worklist-type'></span><label>Description</label><span class='worklist-desc'></span><label>Length</label><span class='worklist-length'></span><label>Commissioned</label><span class='worklist-commissioned'></span><label>Available at</label><span class='worklist-available'></span></div>");
+            entry.find(".worklist-title").text(work.title + " (" + work.year + ")");
+            entry.find(".worklist-type").text(work.type);
+            entry.find(".worklist-desc").text(work.desc || "-");
+            entry.find(".worklist-length").text(work.length);
+            entry.find(".worklist-commissioned").text(work.commissioned || "-");
+            entry.find(".worklist-available").html(work.available || "Contact me");
+            allWorks.append(entry);
+          }
+          allWorks.append($("<h3>Orchestra</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Orchestra") { appendWork(w); }
+          })
+          allWorks.append($("<h3>Choir</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Choir") { appendWork(w); }
+          });
+          allWorks.append($("<h3>Chamber Music</h3>"))
+          works.forEach(function (w) {
+            if(w.type === "Chamber Music") { appendWork(w); }
+          });
+        });
+
+        var timeSinceScroll = -1;
+        setInterval(function checkScrollEnd() {
+          if(timeSinceScroll !== -1 && new Date().getTime() - 100 > timeSinceScroll) {
+            var i = Math.round(flow.scrollLeft() / 205);
+            if(filteredWorks[i]) {
+              flow.animate({scrollLeft: 205 * i}, 200);
+            }
+
+            timeSinceScroll = -1;
+          }
+        }, 100);
+
+        flow.scroll(function () {
+          var i = Math.round(flow.scrollLeft() / 205);
+          var work = filteredWorks[i];
+          if(work) {
+            $(".album").removeClass("selected");
+            $($(".album").get(i)).addClass("selected");
+            updatePlayer(work);
+            timeSinceScroll = new Date().getTime();
+          }
+        });
+
+        $.getJSON("works.json", function (ws) {
+          works = ws;
+
+          renderWorks()
+        });
+
+        $(".sort-by > span").click(function () {
+          $(".sort-by > span").removeClass("selected");
+          $(this).addClass("selected");          
+          sortBy = $(this).data("sortby");
+          renderWorks();
+        })
+        $(".show-only > span").click(function () {
+          $(".show-only > span").removeClass("selected");
+          $(this).addClass("selected");          
+          showOnly = $(this).data("show");
+          renderWorks();
+        });
+
+      }) 
+    </script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=158797814244626&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </body>
+</html>
