@@ -1,4 +1,5 @@
 [
+	{"type": "Choir", "title": "Clare Coast", "desc": "Lyrics by Emily Lawless. Dramatic tale about Irish mercenaries who had to fight and die oversea, longing home.", "commissioned": "", "length": "Approx. 6 min", "year": 2018, "available": "<a href='https://www.svenskmusik.org/sv'>Svensk Musik</a>"}, 
 	{"type": "Chamber Music", "title": "Hope is the thing with feathers", "desc": "Flute, Clarinet Bb, Marimba, Violin, Viola and Cello", "commissioned": "Commissioned by Kulturskolan in Norrköping", "length": "9' 30''", "year": 2018, "available": "Contact me"},
 	{"type": "Chamber Music", "title": "Strömmen", "desc": "Clarinet Bb and Marimba. Fun on a folk note", "audio": "musik/Strommen.mp3", "commissioned": "Commissioned by Duo Marinett", "length": "5'", "year": 2015},
 	{"type":"Orchestra", "title":"Flodenyr", "year": 2000, "desc": "Intermezzo for chamber orchestra", "length": "5'", "commissioned": ""},
