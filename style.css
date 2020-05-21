@@ -545,6 +545,7 @@ blockquote:after {
 	.audio-player {
 		position: absolute;
 		bottom: 5px;
+		right: 5px;
 	}
 
 	.album-player {
